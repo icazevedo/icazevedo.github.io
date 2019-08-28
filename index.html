@@ -14,7 +14,7 @@
 <body>
     <div id="sidebar-left">
         <ul id="sidebar-left-ul">
-            <li class="sidebar-left-li active">
+            <li class="sidebar-left-li">
                 <a href="#">Início</a>
             </li>
 
@@ -23,13 +23,23 @@
             </li>
 
             <li class="sidebar-left-li">
-                <a href="#">Sobre</a>
+                <a href="#aboutandcontact">Sobre</a>
             </li>
 
             <li class="sidebar-left-li">
-                <a href="#">Contato</a>
+                <a href="#aboutandcontact">Contato</a>
             </li>
         </ul>
+
+        <div class="social-networks">
+            <a href="https://github.com/icazevedo">
+                <img src="images/networks/github.svg" alt="Github" class="social-networks-image">
+            </a>
+
+            <a href="https://www.linkedin.com/in/icaro-franca/">
+                <img src="images/networks/linkedin.png" alt="LinkedIn" class="social-networks-image">
+            </a>
+        </div>
     </div>
 
     <div id="main">
@@ -39,7 +49,7 @@
                 <div id="main-information-box-picture">
                     <img src="./images/profile-picture.jpg" alt="Profile picture">
                 </div>
-                
+
                 <div id="main-information-box-intro">
                     Me chamo
                 </div>
@@ -57,69 +67,276 @@
                 </div>
 
                 <div id="main-information-box-more">
-                    <a href="#">Saiba mais sobre mim ></a>
+                    <a href="#aboutandcontact">Saiba mais sobre mim ></a>
                 </div>
             </div>
         </div>
-        <div class="section-container">
-            <div id="applications">
+        <div id="applications">
+            <div class="section-container">
                 <h1 class="section-title">Aplicações</h1>
 
-                <div class="meumenu-images-container">
-                    <div class="meumenu-images">
-                        <img src="images/meumenu/1.webp" alt="Imagem do aplicativo MeuMenu" class="app-picture meumenu-picture picture1"/>
-                        <img src="images/meumenu/3.webp" alt="Imagem do aplicativo MeuMenu" class="app-picture meumenu-picture picture2"/>
-                        <img src="images/meumenu/2.webp" alt="Imagem do aplicativo MeuMenu" class="app-picture meumenu-picture picture3"/>
+                <div class="application-list">
+                    <div class="application-container">
+                        <div class="application-container-title">
+                            MeuMenu
+                        </div>
+
+                        <div class="meumenu-images-container">
+                            <div class="previous-next-button previous-meumenu" onclick="plusDivs(0, -1)">
+                                <img src="images/arrow/left.png" alt="Seta para a esquerda" class="previous-next-image">
+                            </div>
+
+                            <div class="meumenu-images">
+                                <img src="images/meumenu/1.webp" alt="Imagem do aplicativo MeuMenu"
+                                    class="app-picture meumenu-picture" />
+                                <img src="images/meumenu/3.webp" alt="Imagem do aplicativo MeuMenu"
+                                    class="app-picture meumenu-picture" />
+                                <img src="images/meumenu/2.webp" alt="Imagem do aplicativo MeuMenu"
+                                    class="app-picture meumenu-picture" />
+                                <img src="images/meumenu/4.jpg" alt="Imagem do aplicativo MeuMenu"
+                                    class="app-picture meumenu-picture" />
+                            </div>
+
+                            <div class="previous-next-button next-meumenu" onclick="plusDivs(0, 1)">
+                                <img src="images/arrow/right.png" alt="Seta para a direita" class="previous-next-image">
+                            </div>
+                        </div>
+
+                        <div class="application-framework-list">
+                            <a href="https://facebook.github.io/react-native/" target="_blank">
+                                <img src="images/react-logo.png" alt="Logo do React" class="application-framework">
+                            </a>
+                        </div>
+
+                        <p class="application-container-description">
+                            &emsp;&emsp;O MeuMenu é um aplicativo de delivery de comida na cidade
+                            de Natal. Desenvolvi todo o front-end da aplicação utilizando
+                            React Native. O app estava disponível para Android e iOS, mas o
+                            serviço não está mais em operação.
+                        </p>
+                    </div>
+
+                    <div class="application-container">
+                        <div class="application-container-title">
+                            Campus Seguro
+                        </div>
+
+                        <div class="campusseguro-images-container">
+                            <div class="previous-next-button previous-campusseguro" onclick="plusDivs(1, -1)">
+                                <img src="images/arrow/left.png" alt="Seta para a esquerda" class="previous-next-image">
+                            </div>
+
+                            <div class="campusseguro-images">
+                                <img src="images/campusseguro/1.png" alt="Imagem do aplicativo Campus Seguro"
+                                    class="app-picture campusseguro-picture" />
+                                <img src="images/campusseguro/3.png" alt="Imagem do aplicativo Campus Seguro"
+                                    class="app-picture campusseguro-picture" />
+                                <img src="images/campusseguro/4.png" alt="Imagem do aplicativo Campus Seguro"
+                                    class="app-picture campusseguro-picture" />
+                                <img src="images/campusseguro/5.png" alt="Imagem do aplicativo Campus Seguro"
+                                    class="app-picture campusseguro-picture" />
+                                <img src="images/campusseguro/6.png" alt="Imagem do aplicativo Campus Seguro"
+                                    class="app-picture campusseguro-picture" />
+                                <img src="images/campusseguro/7.png" alt="Imagem do aplicativo Campus Seguro"
+                                    class="app-picture campusseguro-picture" />
+                                <img src="images/campusseguro/8.png" alt="Imagem do aplicativo Campus Seguro"
+                                    class="app-picture campusseguro-picture" />
+                            </div>
+
+                            <div class="previous-next-button next-campusseguro" onclick="plusDivs(1, 1)">
+                                <img src="images/arrow/right.png" alt="Seta para a direita" class="previous-next-image">
+                            </div>
+                        </div>
+
+                        <div class="application-framework-list">
+
+                            <a href="https://facebook.github.io/react-native/" target="_blank">
+                                <img src="images/react-logo.png" alt="Logo do React" class="application-framework">
+                            </a>
+
+                            <a href="https://spring.io/" target="_blank">
+                                <img src="images/spring-logo.svg" alt="Logo do Spring Framework"
+                                    class="application-framework">
+                            </a>
+                        </div>
+
+                        <p class="application-container-description">
+                            &emsp;&emsp;O Campus Seguro é o aplicativo oficial de segurança do
+                            Campus Central da Universidade Federal do Rio Grande do Norte (UFRN).
+                            Desenvolvi todo o front-end do aplicativo e grande parte de seu back-end.
+                            Já operacional há vários meses, o Campus Seguro pode ser encontrado nas lojas como Smart
+                            Campus,
+                            aplicativo que engloba outras funcionalidades no contexto de campus inteligente.
+                        </p>
+                    </div>
+
+                    <div class="application-container">
+                        <div class="application-container-title">
+                            App de ônibus
+                        </div>
+
+                        <div class="apponibus-images-container">
+                            <div class="previous-next-button previous-apponibus" onclick="plusDivs(2, -1)">
+                                <img src="images/arrow/left.png" alt="Seta para a esquerda" class="previous-next-image">
+                            </div>
+
+                            <div class="apponibus-images">
+                                <img src="images/apponibus/1.png" alt="Imagem do aplicativo de Õnibus"
+                                    class="app-picture apponibus-picture" />
+                                <img src="images/apponibus/2.png" alt="Imagem do aplicativo de Õnibus"
+                                    class="app-picture apponibus-picture" />
+                            </div>
+
+                            <div class="previous-next-button next-apponibus" onclick="plusDivs(2, 1)">
+                                <img src="images/arrow/right.png" alt="Seta para a direita" class="previous-next-image">
+                            </div>
+                        </div>
+
+                        <div class="application-framework-list">
+                            <a href="https://flutter.dev/" target="_blank">
+                                <img src="images/flutter-logo.png" alt="Logo do Flutter" class="application-framework">
+                            </a>
+                        </div>
+
+                        <p class="application-container-description">
+                            &emsp;&emsp;Desenvolvi o aplicativo de consulta de
+                            horário de ônibus em meu tempo livre como <i>proof-of-concept</i> do
+                            Flutter, que ainda estava em estágio de <i>alpha release</i>. Foi através do projeto
+                            que tive meu primeiro contato com a programação reativa, e isso me ajudou bastante
+                            a lidar com bibliotecas de gerenciamento de estado e de manipulação de datas e horas.
+                        </p>
                     </div>
                 </div>
 
-                <div class="meumenu-images-buttons">
-                    <div class="previous-next-button previous-meumenu" onclick="plusDivs(-1)">
-                        <img src="images/arrow/left.png" alt="Seta para a esquerda" class="previous-next-image">
-                    </div>
 
-                    <div class="previous-next-button next-meumenu" onclick="plusDivs(1)">
-                        <img src="images/arrow/right.png" alt="Seta para a direita" class="previous-next-image">
+                <div class="application-big-container">
+                    <video width="529.3" height="236.6" controls class="application-big-video">
+                        <source src="videos/demonstracao-ifrntv.mp4" type="video/mp4">
+                        Seu navegador não suporta a execução de vídeos
+                    </video>
+
+                    <div class="application-big-container-information">
+                        <div class="application-big-container-title">
+                            IFRN.TV
+                        </div>
+                        <p class="application-big-container-description">
+                            &emsp;&emsp;O IFRN.TV é uma plataforma onde, através do Twitter,
+                            a comunidade do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+                            do Norte pode interagir e acompanhar as novidades relacionadas à instituição.
+                            O IFRN.TV foi instalado no Campus Caicó, onde é possível acompanhar
+                            os novos tweets e notícias relacionadas ao instituto através de uma TV posicionada
+                            no ambiente de recreação do campus.
+                        </p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+
+        <div id="aboutandcontact">
+            <div class="half-section-container">
+                <h1 class="section-title-left">Sobre</h1>
+
+                <p class="about-description">
+                    &emsp;&emsp;Tenho 20 anos, sou aluno do curso de Bacharelado em Tecnologia da Informação,
+                    na Universidade Federal do Rio Grande do Norte (UFRN), com previsão para conclusão
+                    no período de 2020.2. No Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+                    do Norte (IFRN), em 2016, me formei como Técnico em Informática.
+
+                    <br>
+
+                    &emsp;&emsp;Há quase dois anos trabalho como desenvolvedor full stack no <a>Smart Metropolis</a>,
+                    onde atuo desenvolvendo soluções voltadas para o contexto de cidades
+                    e campus inteligente, principalmente no âmbito da segurança, como é o caso do Campus Seguro.
+                    No IFRN, trabalhei no Centro de Competências em Software Livre (CCSL),
+                    onde desenvolvi o IFRN.TV.
+                </p>
+            </div>
+
+            <div class="half-section-container">
+                <h1 class="section-title-left">Contato</h1>
+
+                <div class="detailed-contact-information">
+                    <p>
+                        <b>Email</b>
+                        <a href="mailto:icazevedo10@gmail.com" target="_blank">icazevedo10@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <b>Telefone</b>
+                        +55 (84) 99221-2020
+                    </p>
+
+                    <p>
+                        <b>LinkedIn</b>
+                        <a href="https://www.linkedin.com/in/icaro-franca/" target="_blank">icaro-franca</a>
+                    </p>
+
+                    <p>
+                        <b>Github</b>
+                        <a href="https://github.com/icazevedo" target="_blank">icazevedo</a>
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
 
     <script>
-        var slideIndex = 1;
-            showDivs(slideIndex);
+        var slideIndex = [1, 1, 1];
 
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
+        slideIndex.forEach((index, slideNumber) => {
+            showDivs(slideNumber, index)
+        });
+
+        function plusDivs(slideNumber, n) {
+            showDivs(slideNumber, slideIndex[slideNumber] += n);
         }
 
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("meumenu-picture");
-            var previousMeumenu = document.getElementsByClassName("previous-meumenu");
-            var nextMeumenu = document.getElementsByClassName("next-meumenu");
+        function showDivs(slideNumber, n) {
+            var picturesClass;
+            var nextClass;
+            var previousClass;
 
-            if (n > x.length) {slideIndex = 1} 
-            if (n < 1) {slideIndex = x.length};
+            if (slideNumber === 0) {
+                picturesClass = 'meumenu-picture';
+                nextClass = 'next-meumenu';
+                previousClass = 'previous-meumenu';
+            } else if (slideNumber === 1) {
+                picturesClass = 'campusseguro-picture';
+                nextClass = 'next-campusseguro';
+                previousClass = 'previous-campusseguro';
+            } else if (slideNumber === 2) {
+                picturesClass = 'apponibus-picture';
+                nextClass = 'next-apponibus';
+                previousClass = 'previous-apponibus';
+            }
+
+            var i;
+            var x = document.getElementsByClassName(picturesClass);
+            var previousButton = document.getElementsByClassName(previousClass);
+            var nextButton = document.getElementsByClassName(nextClass);
+
+            if (n > x.length) { slideIndex[slideNumber] = 1 }
+            if (n < 1) { slideIndex[slideNumber] = x.length };
 
             for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none"; 
+                x[i].style.display = "none";
             }
 
-            if (slideIndex === 1) {
-                previousMeumenu[0].style.visibility = "hidden";
+            if (slideIndex[slideNumber] === 1) {
+                previousButton[0].style.visibility = "hidden";
             } else {
-                previousMeumenu[0].style.visibility = "initial";
+                previousButton[0].style.visibility = "initial";
             }
 
-            if (slideIndex === x.length) {
-                nextMeumenu[0].style.visibility = "hidden";
+            if (slideIndex[slideNumber] === x.length) {
+                nextButton[0].style.visibility = "hidden";
             } else {
-                nextMeumenu[0].style.visibility = "initial";
+                nextButton[0].style.visibility = "initial";
             }
 
-            x[slideIndex-1].style.display = "block"; 
+            x[slideIndex[slideNumber] - 1].style.display = "block";
         }
     </script>
 </body>
