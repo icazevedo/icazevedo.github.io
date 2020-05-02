@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/HoverPointer.dart';
 
 class MainNavigationBar extends StatefulWidget {
-  MainNavigationBar({Key key}) : super(key: key);
+  MainNavigationBar({Key key, this.onChange}) : super(key: key);
+
+  final ValueChanged<int> onChange;
 
   @override
   _MainNavigationBarState createState() => _MainNavigationBarState();
@@ -11,46 +13,43 @@ class MainNavigationBar extends StatefulWidget {
 class _MainNavigationBarState extends State<MainNavigationBar> {
   int selected = 0;
 
+  void setSelected(int newSelected) {
+    setState(() {
+      selected = newSelected;
+    });
+
+    if (widget.onChange != null) {
+      widget.onChange(newSelected);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Material(
-      elevation: 3,
-      child: Stack(
-        children: [
-          Container(
-            width: 90,
-            color: Color(0xff132032),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MainNavigationItem(
-                  icon: Icons.school,
-                  title: "Início",
-                  selected: selected == 0,
-                  onTap: () => {
-                    setState(() {
-                      selected = 0;
-                    }),
-                  },
-                ),
-                MainNavigationItem(
-                  icon: Icons.account_balance,
-                  title: "Experiência",
-                  selected: selected == 1,
-                  onTap: () => {
-                    setState(() {
-                      selected = 1;
-                    }),
-                  },
-                ),
-              ],
-            ),
+    return Container(
+      width: 90,
+      child: Material(
+        elevation: 3,
+        color: Color(0xffc8b273),
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              MainNavigationItem(
+                icon: Icons.school,
+                title: "Início",
+                selected: selected == 0,
+                onTap: () => setSelected(0),
+              ),
+              MainNavigationItem(
+                icon: Icons.account_balance,
+                title: "Experiência",
+                selected: selected == 1,
+                onTap: () => setSelected(1),
+              ),
+            ],
           ),
-          Container(
-            color: Color(0xff132032),
-            height: double.infinity,
-          ),
-        ],
+        ),
       ),
     );
   }
@@ -84,30 +83,30 @@ class _MainNavigationItemState extends State<MainNavigationItem> {
       onTap: this.widget.onTap,
       child: HoverPointer(
         onHover: () => setState(() {
-          backgroundColor = Color(0xffc8b273).withOpacity(0.1);
+          backgroundColor = Color(0xff132032).withOpacity(0.3);
         }),
         onExit: () => setState(() {
           backgroundColor = Colors.transparent;
         }),
-        child: Container(
-          width: double.infinity,
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 100),
           padding: EdgeInsets.symmetric(
             vertical: 15,
           ),
-          color: this.widget.selected ? Color(0xffc8b273) : backgroundColor,
+          color: this.widget.selected ? Color(0xff132032) : backgroundColor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(
                 this.widget.icon,
-                color: this.widget.selected
+                color: !this.widget.selected
                     ? Color(0xff132032)
                     : Color(0xffc8b273),
               ),
               Text(
                 this.widget.title,
                 style: TextStyle(
-                  color: this.widget.selected
+                  color: !this.widget.selected
                       ? Color(0xff132032)
                       : Color(0xffc8b273),
                   fontSize: 12,
