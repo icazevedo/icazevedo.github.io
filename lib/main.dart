@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Expanded(
                               child: AnimatedSwitcher(
                                 duration: Duration(milliseconds: 250),
-                                child: currentPage == 0 ? HomeView() : ExperiencesView(),
+                                child: currentPage == 1 ? HomeView() : ExperiencesView(),
                               ),
                             ),
                           ],
