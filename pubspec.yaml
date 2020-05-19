@@ -53,6 +53,26 @@ flutter:
   - assets/images/foto-perfil.jpg
   - assets/images/smartmetropolis_icon.png
 
+  # apponibus
+  - assets/images/apponibus/1.png
+  - assets/images/apponibus/2.png
+
+  #campusseguro
+  - assets/images/campusseguro/1.png
+  - assets/images/campusseguro/2.png
+  - assets/images/campusseguro/3.png
+  - assets/images/campusseguro/4.png
+  - assets/images/campusseguro/5.png
+  - assets/images/campusseguro/6.png
+  - assets/images/campusseguro/7.png
+  - assets/images/campusseguro/8.png
+
+  #meumenu
+  - assets/images/meumenu/1.webp
+  - assets/images/meumenu/2.webp
+  - assets/images/meumenu/3.webp
+  - assets/images/meumenu/4.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

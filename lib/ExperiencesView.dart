@@ -19,13 +19,12 @@ class _ExperiencesViewState extends State<ExperiencesView> {
       height: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
         children: [
-          Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 15,
-            ),
-            child: IntrinsicWidth(
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(
+                top: 15,
+              ),
               child: Column(
                 children: [
                   Padding(
@@ -35,7 +34,6 @@ class _ExperiencesViewState extends State<ExperiencesView> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
                       children: [
                         ExperienceNavigationItem(
                           image: "images/smartmetropolis_icon.png",
@@ -65,25 +63,235 @@ class _ExperiencesViewState extends State<ExperiencesView> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 5,
                   ),
-                  Container(
-                    height: 1,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: <Color>[
-                          Color(0xffc8b273).withOpacity(0.05),
-                          Color(0xffc8b273),
-                          Color(0xffc8b273),
-                          Color(0xffc8b273).withOpacity(0.05),
-                        ],
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        stops: <double>[
-                          0.0,
-                          0.3,
-                          0.7,
-                          1,
+                  Row(
+                    children: [
+                      Expanded(flex: 1, child: Container()),
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          height: 1,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: <Color>[
+                                Color(0xffc8b273).withOpacity(0.05),
+                                Color(0xffc8b273),
+                                Color(0xffc8b273),
+                                Color(0xffc8b273).withOpacity(0.05),
+                              ],
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              stops: <double>[
+                                0.0,
+                                0.3,
+                                0.7,
+                                1,
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(flex: 1, child: Container()),
+                    ],
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 400,
+                            height: double.infinity,
+                            child: Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  left: 1,
+                                  right: 1,
+                                  top: 0,
+                                  bottom: 0,
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    width: 398,
+                                    child: ListView(
+                                      scrollDirection: Axis.horizontal,
+                                      controller:
+                                          PageController(viewportFraction: 0.6),
+                                      physics: PageScrollPhysics(),
+                                      children: <Widget>[
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 2,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 5,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                'images/campusseguro/1.png',
+                                              ),
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 1,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 5,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                'images/campusseguro/2.png',
+                                              ),
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 1,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 5,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                'images/campusseguro/3.png',
+                                              ),
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 1,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 5,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                'images/campusseguro/4.png',
+                                              ),
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 1,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 5,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                'images/campusseguro/5.png',
+                                              ),
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 1,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 5,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                'images/campusseguro/6.png',
+                                              ),
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 1,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 5,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                'images/campusseguro/7.png',
+                                              ),
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 1,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 5,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                'images/campusseguro/8.png',
+                                              ),
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          width: (398 / 10) * 2,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 0,
+                                  top: 0,
+                                  bottom: 0,
+                                  child: Container(
+                                    width: 75,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        stops: [0, 1],
+                                        colors: [
+                                          Color(0xff132032),
+                                          Color(0xff132032).withOpacity(0.0),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  right: 0,
+                                  top: 0,
+                                  bottom: 0,
+                                  child: Container(
+                                    width: 75,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        stops: [0, 1],
+                                        colors: [
+                                          Color(0xff132032).withOpacity(0.0),
+                                          Color(0xff132032),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -135,10 +343,8 @@ class _ExperienceNavigationItemState extends State<ExperienceNavigationItem> {
           // color: Color(0xffc8b273).withOpacity(1),
           duration: Duration(milliseconds: 100),
           width: 100,
-          height: 45,
           margin: EdgeInsets.symmetric(horizontal: 15),
-          child: Stack(
-            alignment: Alignment.topCenter,
+          child: Column(
             children: [
               AnimatedContainer(
                 duration: Duration(milliseconds: 100),
@@ -154,19 +360,16 @@ class _ExperienceNavigationItemState extends State<ExperienceNavigationItem> {
                   ),
                 ),
               ),
-              Positioned(
-                bottom: 0,
-                child: AnimatedDefaultTextStyle(
-                  duration: Duration(milliseconds: 100),
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
-                        color: this.widget.selected
-                            ? Color(0xffc8b273)
-                            : highlightColor,
-                        fontSize: 12,
-                      ),
-                  child: Text(
-                    this.widget.title,
-                  ),
+              AnimatedDefaultTextStyle(
+                duration: Duration(milliseconds: 100),
+                style: Theme.of(context).textTheme.bodyText2.copyWith(
+                      color: this.widget.selected
+                          ? Color(0xffc8b273)
+                          : highlightColor,
+                      fontSize: 12,
+                    ),
+                child: Text(
+                  this.widget.title,
                 ),
               ),
             ],
